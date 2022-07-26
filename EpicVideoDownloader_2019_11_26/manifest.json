@@ -1,0 +1,18 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/logo.png",
+      "default_title": "Try to download this video"
+   },
+   "content_security_policy": "script-src 'self' https://code.jquery.com https://cdn.firebase.com https://*.firebaseio.com http://video.epicbrowser.net object-src 'self'",
+   "description": "Epic Video Downloader",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA574B+4MDlmrNaDkKfEHcAb49DAR/siJxIRJqxfzd2BaDBh8+WTuNLC6WP/KY3shfnSHYbzkiJL2pTiijphoNpYLJBlNedTEwF15gdmlhXQxln3z+ohMtKzsbKgKkhcgdjphT1kXsghNLlXFKWmpRYGkx1Q4WdDY9dmlnDQ4jt/+2Qlyy0hQM4h9SKFm+hgU1lodu2GK18qSfEI+ttHcmRBRy/FEw4n8s6KDzNPCruu+c+RB21ekFO7K+y6tSTjSobyogECIN4SFPdLlPDTkP0cTuN9W5WCvwo2sM1jvoAzUc503xeNFMexdgFcAwFsv2m9SEmjPWvS6rTbjr8nKYuwIDAQAB",
+   "manifest_version": 2,
+   "name": "05_Epic Video Downloader",
+   "options_page": "main.html",
+   "permissions": [ "tabs", "\u003Call_urls>" ],
+   "update_url": "https://updates.epicbrowser.com/extensions/updates.xml",
+   "version": "2.1"
+}

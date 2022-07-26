@@ -1,0 +1,29 @@
+{
+   "author": "@Ching",
+   "background": {
+      "persistent": true,
+      "scripts": [ "assets/js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "assets/img/logo.png",
+      "default_popup": ""
+   },
+   "content_scripts": [ {
+      "js": [ "assets/js/jquery-2.0.1.min.js", "assets/js/content.js" ],
+      // "matches": [ "*://search.epicbrowser.com/login/" ],
+      "matches": [ "*://epicsearch.in/login/" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Auto Login extension for epic",
+   "icons": {
+      "128": "assets/img/logo_128x128.png",
+      "16": "assets/img/logo_16x16.png",
+      "48": "assets/img/logo_48x48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzr47vgagx0fcih5yKCn7eazvNcR/H36/Iyom/G/GTf74xo6N4fbKwRwWdCcjvZY0SU7CTfQ5WUc1H8hYmh2gnXAwp1wPfeAqdtyQbXI1GLIPka6MIdZVs9n3CjLNbQrqqKMusXsjOwa7W9DEmRlQXDlsNB85NBwnqk0Qaa02xkEMuSBdC2fM3ZrfAQOwPmt46s4SmacwWqACZrwIOf7IniZAD7IAg9uWCTrKpHJu6sOg+he4Oy441ce2GNSeMr0P2XwBsaGRwqyxcv6W/Ks2FzrF10NtXztP+O4ej49O2tlYUoszZTqBBolcomBSF+5ckBMCcCm3J1t6ITEh3gigSwIDAQAB",
+   "manifest_version": 2,
+   "name": "09_Auto Login",
+   "permissions": [ "unlimitedStorage", "management", "tabs", "webRequest", "cookies", "*://search.epicbrowser.com/*", "*://epicsearch.in/*", "*://*.google.com/", "webRequestBlocking", "storage", "activeTab", "identity", "fileSystem" ],
+   "update_url": "http://updates.epicbrowser.com/extensions/updates.xml",
+   "version": "1.4"
+}

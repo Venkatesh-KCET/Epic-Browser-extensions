@@ -1,0 +1,37 @@
+{
+   "background": {
+      "page": "lib/chrome/background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_popup": "data/popup/popup.html",
+      "default_title": "WebGL and Canvas Fingerprint Defender"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "data/content_script/inject.js" ],
+      "match_about_blank": true,
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Defending against WebGL and Canvas fingerprinting by reporting a fake value.",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn5BFhhpQ8rrJDNYiufyHEOzvoqsRafq6UvhMVKxVvWy7exeUz4XpymXksKo/AwPMRq3fmJo8701BTr3sSVmPn19ku03x0LRRoYlMFdqmq+ns+kEICcF4pp2MSJgGXxwJnBFaCi8EbIx/yPXdHKKTLdx2yUrT7oj+ur/L+olLfM4sQyue0OFhtFH9VKsiHDxsxVXA6/OB7fbwfuyNU/2t6C6fQHAb5ZfaMdvyuYLqx5Ipsk7Kue0/OKREFYGqpglm9eU1HCKklAsI2rJ2JSY/OEfE9x0y9+FOAyg2p7NaZKkTKKxczNGhyz3ax/wYwWePjcUiDMC9TqUvuBLyTkNerQIDAQAB",
+   "manifest_version": 2,
+   "name": "10_WebGL and Canvas Fingerprint Defender",
+   "permissions": [ "storage", "contextMenus", "notifications" ],
+   "short_name": "webgl-defender",
+   "update_url": "https://updates.epicbrowser.com/extensions/updates.xml",
+   "version": "0.2.1"
+}

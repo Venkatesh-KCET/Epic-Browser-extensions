@@ -1,0 +1,41 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "name": "Enable/Disable ultrasound filtering"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      // twitch.tv is not working, becuase of browsesafe and ultrasound extensions, so excluding the URLs.
+      "exclude_matches": [ 
+                           "http://www.twitch.tv/*", 
+                           "https://www.twitch.tv/*" ,
+                           // "https://*.jtvnw.net/*" ,
+                           // "https://*.twitch.tv/*" ,
+                           "https://static-cdn.jtvnw.net/*",
+                           "https://static.twitchcdn.net/*",
+                           "https://client-event-reporter.twitch.tv/*",
+                           "https://clips-media-assets2.twitch.tv/*",
+                           "https://gql.twitch.tv/*",
+                           "https://polyfill.twitchsvc.net/*"
+                        ],
+      "run_at": "document_end"
+   } ],
+   "description": "Filters inaudible beacons used for device tracking",
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArHOwSMe3K5PC0U8bZo0xGLPLT4CBmvxsTp11m2E0VH6V2uLEqp3HJpQTwKhpZUZVHXmQ6uZItGiJBRlZZmsaYEHldZHdNMA54LxooHJAV1z0eqk8sXOgTdQnNtBWxELdqMU5uUzZP77rYrPErQDSnm+j6d9UYtDfAGvbxTtYXHQtSZBcZOY0h0Y241IlHpRprGDefjRcN7bJb86eKpsxaySFC3aGeNpl4Wht029rQ4V6mIssmU339nmhUZ1lUOg+6js1NtcFMMbISg5giGTOTgyh6bVqeYW5SeIPn/RCIynuuti193UGsJzS27w5xvN0ngJ4lLLC3Ov1SQLl41IBvQIDAQAB",
+   "manifest_version": 2,
+   "name": "07_Ultrasound Filter",
+   "options_ui": {
+      "page": "options.html"
+   },
+   "permissions": [ "storage" ],
+   "update_url": "http://updates.epicbrowser.com/extensions/updates.xml",
+   "version": "1.2",
+   "web_accessible_resources": [ "intercept.js" ]
+}

@@ -1,0 +1,66 @@
+{
+   "background": {
+      "page": "html/background.html"
+   },
+   "browser_action": {
+      "default_icon": "img/IconForbidden.png",
+      "default_popup": "html/popup.html",
+      "default_title": "BrowseSafe"
+   },
+   "commands": {
+      "removetempall": {
+         "description": "__MSG_hotkeysremoveall__",
+         "suggested_key": {
+            "default": "Ctrl+Shift+Q"
+         }
+      },
+      "removetemppage": {
+         "description": "__MSG_hotkeysremove__",
+         "suggested_key": {
+            "default": "Ctrl+Shift+R"
+         }
+      },
+      "temppage": {
+         "description": "__MSG_hotkeystoggle__",
+         "suggested_key": {
+            "default": "Ctrl+Shift+S"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/jquery.js", "js/common.js", "js/yoyo.js", "js/ss.js" ],
+      // twitch.tv is not working, becuase of browsesafe and ultrasound extensions, so excluding the URLs.
+      "exclude_matches": [ 
+                           "http://www.twitch.tv/*", 
+                           "https://www.twitch.tv/*" ,
+                           // "https://*.jtvnw.net/*" ,
+                           // "https://*.twitch.tv/*" ,
+                           "https://static-cdn.jtvnw.net/*",
+                           "https://static.twitchcdn.net/*",
+                           "https://client-event-reporter.twitch.tv/*",
+                           "https://clips-media-assets2.twitch.tv/*",
+                           "https://gql.twitch.tv/*",
+                           "https://polyfill.twitchsvc.net/*"
+                        ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appdescription__",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "24": "img/icon24.png",
+      "32": "img/icon32.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3G+I3B5bc+LrlJWyzYf5d86WjzIOyoMvEb2cdQVxSBbSsELNa/SOgDpbdh1N/ZwRWDwgvSMqd8Gh4kzXtIDkxyCsPrb0bSJpQY1pxIlGIWeJzullyEn0mAESPHqLwHMxQ9rXrbfMLJpj+JT6H/pCTjME+VpwerrnUIGY+SwOf8yTHajWKrKBJfy7i+bVOvvAM2N8FGH085Gh+l609Qq5cbWirl+d0KuuVxV6g+OKgL1GTSFSNgSzdxkIWkPWqkIse3SlCFOxgiM4gguC38JoIkR6Ro7zABBXG9tMNOdL7JANKlhgIvgMBCVop3UhfYn6ESLHoxdfRSaHIPbg8PIl2wIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "6",
+   "name": "06_BrowseSafe",
+   "options_page": "html/options.html",
+   "permissions": [ "http://*/*", "https://*/*", "tabs", "unlimitedStorage", "webRequest", "webRequestBlocking", "storage", "notifications", "privacy", "contextMenus" ],
+   "update_url": "http://updates.epicbrowser.com/extensions/updates.xml",
+   "version": "2.2.0"
+}

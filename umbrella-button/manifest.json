@@ -1,0 +1,21 @@
+{
+   "background": {
+      "scripts": [ "back.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery.js", "jquery.iframetracker.js", "contentScanner.js" ],
+      "matches": [ "https://search.yahoo.com/*", "https://ys.epicbrowser.com/*", "https://update.epicbrowser.com/*", "https://searchyahoo.epicbrowser.com/*", "https://ar.search.yahoo.com/*", "https://at.search.yahoo.com/*", "https://br.search.yahoo.com/*", "https://ca.search.yahoo.com/*", "https://qc.search.yahoo.com/*", "https://ch.search.yahoo.com/*", "https://chfr.search.yahoo.com/*", "https://chit.search.yahoo.com/*", "https://cl.search.yahoo.com/*", "https://co.search.yahoo.com/*", "https://de.search.yahoo.com/*", "https://dk.search.yahoo.com/*", "https://es.search.yahoo.com/*", "https://fi.search.yahoo.com/*", "https://us.search.yahoo.com/*","https://fr.search.yahoo.com/*",  "https://hk.search.yahoo.com/*", "https://id.search.yahoo.com/*", "https://in.search.yahoo.com/*", "https://it.search.yahoo.com/*", "https://mx.search.yahoo.com/*", "https://malaysia.search.yahoo.com/*", "https://nl.search.yahoo.com/*", "https://no.search.yahoo.com/*", "https://pe.search.yahoo.com/*", "https://ph.search.yahoo.com/*", "https://se.search.yahoo.com/*", "https://sg.search.yahoo.com/*", "https://th.search.yahoo.com/*", "https://tw.search.yahoo.com/*", "https://uk.search.yahoo.com/*", "https://ve.search.yahoo.com/*", "https://vn.search.yahoo.com/*", "https://huffpost.com/*", "https://m.huffpost.com/*", "https://www.huffpost.com/*", "https://www.m.huffpost.com/*", "https://sports.yahoo.com/*", "https://finance.yahoo.com/*", "https://mail.yahoo.com/*", "https://rivals.yahoo.com/*", "https://weather.yahoo.com/*", "https://messenger.yahoo.com/*", "https://huffingtonpost.com/*", "https://aol.com/*", "https://discover.aol.com/*", "https://build.aol.com/*", "https://techcrunch.com/*", "https://engadget.com/*", "https://autoblog.com/*", "https://ryot.com/*", "https://builtbygirls.org/*", "https://makers.com/*", "https://flurry.com/*", "https://y.flurry.com/*", "https://gemini.yahoo.com/*", "https://verizondigitalmedia.com/*", "https://brightroll.com/*", "https://onebyaol.com/*", "https://getkanvas.com/*", "https://bbgventures.com/*", "https://www.yahoo.com/*", "https://login.yahoo.com/*", "https://mobile.yahoo.com/*", "https://view.yahoo.com/*", "https://answers.yahoo.com/*", "https://shopping.yahoo.com/*", "https://groups.yahoo.com/*", "https://n.rivals.com/*", "https://www.huffingtonpost.com/*", "https://www.aol.com/*", "https://www.buildseries.com/*", "https://www.engadget.com/*", "https://www.autoblog.com/*", "https://www.ryot.com/*", "https://www.builtbygirls.com/*", "https://www.makers.com/*", "https://www.flurry.com/*", "https://login.flurry.com/*", "https://www.verizondigitalmedia.com/*", "https://www.onebyaol.com/*", "https://www.bbgventures.com/*", "https://www.bing.com/*", "https://www.onebyaol.com/*", "https://advertising.com/*", "https://moatads.com/*", "https://moat.com/*", "https://alephd.com/*", "https://adspirit.de/*", "https://www.adspirit.de/*", "https://acuityplatform.com/*", "https://ads.yahoo.com/*", "https://brightroll.com/*", "https://www.oath.com/*", "https://adinfo.aol.com/*", "https://na.ads.yahoo.com/*", "https://ads.yahoo.com/*", "https://search.aol.com/*", "https://*.onesearch.com/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "chrome_settings",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwiRX0M8NX+JnqM7Gvw/XL9Hhkyn5krIcmnOtW+m2Febud/UnCU7qRUVKAy8mO4j5LaWwBV2n2RmVBCJjTmSRpx1Kd1ZnFcg7sSoWNwAsWj1Ci7Ns0dZ8buF9BG/Qo+eF9j1f3k4gxUEO1Q2r2LPu7Y7NkKtN5OPVIZdogQj73n1g0p+8aGLdxPJsAdUWuyJRbeuL65OAcAUNnNndRPBBaWS2rTrBAYFlubeUcOcPn0d0eSqsh2qml2T4Yo/xP58T0neFb68uhRIP8F7my8HH4RWcW/J1q6o12ckfsw66IC1cuTYeeUUpEWhoiqxO+fs579hgzwTicIk1MwF3OLi1rwIDAQAB",
+   "manifest_version": 2,
+   "name": "03_Umbrella Button",
+   "permissions": [ "cookies", "browsingData", "tabs", "contentSettings", "storage", "browsingData", "webRequest", "management", "http://*/*", "https://*/*", "\u003Call_urls>", "webRequestBlocking" ],
+   "update_url": "http://updates.epicbrowser.com/extensions/updates.xml",
+   "version": "3.8"
+}

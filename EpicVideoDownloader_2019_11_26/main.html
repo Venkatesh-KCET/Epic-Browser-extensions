@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Epic Video Downloader</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+  </head>
+  <body>
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand collapse navbar-collapse">
+              <span><img src="img/logo.png"/></span>
+              Epic Video Downloader
+            </a>
+            <form id="getVideo" class="navbar-form navbar-left">
+              <div class="input-group">
+                <input id="vidoeUrl" type="text" class="form-control" placeholder="Video URL" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">Get</button>
+                </span>
+              </div>
+            </form>
+<!--             <h6 class="h6"style="display: inline-block; width: 50%;margin-top: 10px;padding-top: 1px; ">Please note that for Youtube, Vimeo, Soundcloud, VK, and Facebook, Epic injects a download button into the webpage itself.</h6> -->
+          </div>
+          <div class="collapse navbar-collapse">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="loading" class="container">
+      <div id="alertLoading" class="alert alert-dismissible alert-danger">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <strong>Can't connect</strong> to server.
+      </div>
+      <img id="imgLoading" class="center-block" src="img/loading.gif" />
+    </div>
+    <div id="main" class="container well well-lg">
+      <h2 id="hMain">Epic Video Downloader</h2>
+      <p>Epic Video Downloader</p>
+    </div>
+
+    <div id="get" class="container well well-lg">
+      <legend id="getLegend">Get Links</legend>
+    </div>
+  </body>
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+</html>
